@@ -15,8 +15,8 @@ ReactDOM.render((
   <App>
     <Sidebar />
     <Switch>
-      <Route exact={true} path="/" component={Home} />
-      <Route exact={true} path="/photos" component={Carousel} />
+      <Route path="/" component={Home} />
+      <Route path="/photos" component={Carousel} />
     </Switch>
   </App>
   </HashRouter>
