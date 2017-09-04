@@ -1,19 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './styles/App.css';
 
-class App extends Component {
-  render () {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Harmony Dashut</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+import Sidebar from './components/Sidebar';
+import Main from './components/Main';
+
+const App = () => {
+  return (
+    <div className="App">
+      <Sidebar />
+      <Main />
+    </div>
+  );
 }
 
 export default App;
