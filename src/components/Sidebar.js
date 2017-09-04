@@ -6,7 +6,19 @@ const Sidebar = () => {
     <div className="Sidebar">
       <div className="Name-header">
         <h2>Harmony Dashut</h2>
-        <Link to={'/photos'}><p>Photos</p></Link>
+      </div>
+      <div>
+        <Link to="/">
+          Home
+        </Link>
+        <br />
+        <Link to="/photos">
+          Photos
+        </Link>
+        <br />
+        <Link to="/about">
+          About Me
+        </Link>
       </div>
     </div>
   );
