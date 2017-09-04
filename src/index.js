@@ -6,16 +6,14 @@ import './styles/index.css';
 import {
   App,
   Home,
-  Sidebar,
   Carousel
 } from './components';
 
 ReactDOM.render((
   <HashRouter>
   <App>
-    <Sidebar />
     <Switch>
-      <Route path="/" component={Home} />
+      <Route exact path="/" component={Home} />
       <Route path="/photos" component={Carousel} />
     </Switch>
   </App>
