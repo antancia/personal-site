@@ -13,6 +13,7 @@ class App extends React.Component {
       mql: mql,
       docked: false,
       open: false,
+      transitions: false,
     };
 
     this.mediaQueryChanged = this.mediaQueryChanged.bind(this);
@@ -22,7 +23,7 @@ class App extends React.Component {
 
   componentWillMount() {
     mql.addListener(this.mediaQueryChanged);
-    this.setState({mql: mql, docked: mql.matches});
+    this.setState({mql: mql, docked: mql.matches, transitions: !mql.matches});
   }
 
   componentWillUnmount() {
@@ -37,6 +38,7 @@ class App extends React.Component {
     this.setState({
       mql: mql,
       docked: this.state.mql.matches,
+      transitions: !this.state.mql.matches,
     });
   }
 
@@ -50,6 +52,7 @@ class App extends React.Component {
 
   render() {
     const sidebar = <SidebarContent onSetOpen={this.onSetOpen} />;
+    console.log('TRANSITION!', this.state.transition)
 
     return (
       <div className="App">
@@ -59,6 +62,7 @@ class App extends React.Component {
           docked={this.state.docked}
           onSetOpen={this.onSetOpen}
           shadow={false}
+          transitions={this.state.transitions}
         >
           {!this.state.docked &&
            <a onClick={this.toggleOpen} href="#">=</a>}
