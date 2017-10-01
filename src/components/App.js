@@ -52,7 +52,6 @@ class App extends React.Component {
 
   render() {
     const sidebar = <SidebarContent onSetOpen={this.onSetOpen} />;
-    console.log('TRANSITION!', this.state.transition)
 
     return (
       <div className="App">
