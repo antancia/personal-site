@@ -66,7 +66,9 @@ class App extends React.Component {
         >
           {!this.state.docked &&
            <a onClick={this.toggleOpen} href="#">=</a>}
-          { this.props.children }
+          <div className="App-content">
+            { this.props.children }
+          </div>
         </Sidebar>
       </div>
   );

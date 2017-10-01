@@ -1,8 +1,8 @@
 .SidebarContent {
-  padding: 16px;
   height: 100%;
   background-color: white;
   width: 256;
+  padding: 16px;
 }
 
 .SidebarContent-link: {
