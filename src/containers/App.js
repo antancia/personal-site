@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/App.css';
-import SidebarContent from './SidebarContent';
 import Sidebar from 'react-sidebar';
+import SidebarContent from '../components/SidebarContent';
+import '../styles/App.css';
 
 const mql = window.matchMedia(`(min-width: 800px)`);
 
