@@ -58,7 +58,7 @@ class App extends React.Component {
           open={this.state.open}
           docked={this.state.docked}
           onSetOpen={this.onSetOpen}
-          shadow={true}
+          shadow={false}
         >
           {!this.state.docked &&
            <a onClick={this.toggleOpen} href="#">=</a>}
