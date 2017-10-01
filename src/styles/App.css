@@ -1,14 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
 .App {
   text-align: center;
 }
 
 .App-content {
-  padding: 16px;
+  padding: 20px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  display: flex;
+  height: 30px;
   padding: 20px;
-  color: white;
+}
+
+.hamburger-menu {
+  /*padding: 0;*/
+  text-align: top;
+  width: 30px;
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+}
+
+.name-header {
+  margin: auto;
+  font-family: 'Josefin Sans', sans-serif;
 }

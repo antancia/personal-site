@@ -63,14 +63,23 @@ class App extends React.Component {
           shadow={false}
           transitions={this.state.transitions}
         >
-          {!this.state.docked &&
-           <a onClick={this.toggleOpen} href="#">=</a>}
+          {
+            !this.state.docked &&
+            <div className="App-header">
+              <a
+                onClick={this.toggleOpen}
+                href="#"
+                className="hamburger-menu"
+              >=</a>
+              <h2 className="name-header">Harmony Dashut</h2>
+            </div>
+          }
           <div className="App-content">
             { this.props.children }
           </div>
         </Sidebar>
       </div>
-  );
+    );
   }
 }
 

@@ -2,7 +2,11 @@
   height: 100%;
   background-color: white;
   width: 256;
-  padding: 16px;
+  padding: 20px;
+}
+
+.SidebarContent-header {
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .SidebarContent-link: {
