@@ -1,0 +1,19 @@
+.SidebarContent {
+  padding: 16px;
+  height: 100%;
+  background-color: white;
+  width: 256;
+}
+
+.SidebarContent-link: {
+  display: block;
+  padding: 16px 0px;
+  color: #757575;
+  text-decoration: none;
+}
+
+.SidebarContent-divider: {
+  margin: 8px 0;
+  height: 1;
+  background-color: #757575;
+}
