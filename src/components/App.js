@@ -51,7 +51,12 @@ class App extends React.Component {
   }
 
   render() {
-    const sidebar = <SidebarContent onSetOpen={this.onSetOpen} />;
+    const sidebar = (
+      <SidebarContent
+        onSetOpen={this.onSetOpen}
+        sidebarDocked={this.state.docked}
+      />
+    );
 
     return (
       <div className="App">
@@ -71,8 +76,12 @@ class App extends React.Component {
                 href="#"
                 className="hamburger-menu"
               >=</a>
-              <h2 className="name-header">Harmony Dashut</h2>
+
             </div>
+          }
+          {
+            !this.state.docked &&
+            <h2 className="name-header">Harmony Dashut</h2>
           }
           <div className="App-content">
             { this.props.children }

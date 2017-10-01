@@ -10,7 +10,10 @@ const SidebarContent = (props) => {
   return (
     <div className="SidebarContent">
       <div>
-        <h2 className="SidebarContent-header">Harmony Dashut</h2>
+        {
+          props.sidebarDocked &&
+          <h2 className="SidebarContent-header">Harmony Dashut</h2>
+        }
       </div>
       <div>
         <Link to="/" onClick={closeSidebar}>Home</Link>
