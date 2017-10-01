@@ -2,18 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/SidebarContent.css';
 
-const SidebarContent = () => {
+const SidebarContent = (props) => {
+  function closeSidebar() {
+    props.onSetOpen(false);
+  }
+
   return (
     <div className="SidebarContent">
-      <div className="Name-header">
+      <div>
         <h2>Harmony Dashut</h2>
       </div>
       <div>
-        <Link to="/">Home</Link>
+        <Link to="/" onClick={closeSidebar}>Home</Link>
         <br />
-        <Link to="/photos">Photos</Link>
+        <Link to="/photos" onClick={closeSidebar}>Photos</Link>
         <br />
-        <Link to="/about">About Me</Link>
+        <Link to="/about" onClick={closeSidebar}>About Me</Link>
       </div>
     </div>
   );

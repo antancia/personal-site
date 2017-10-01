@@ -49,7 +49,7 @@ class App extends React.Component {
   }
 
   render() {
-    const sidebar = <SidebarContent />;
+    const sidebar = <SidebarContent onSetOpen={this.onSetOpen} />;
 
     return (
       <div className="App">
