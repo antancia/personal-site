@@ -76,12 +76,11 @@ class App extends React.Component {
                 href="#"
                 className="hamburger-menu"
               >=</a>
-
+              {
+                !this.state.docked &&
+                <h2 className="name-header">Harmony Dashut</h2>
+              }
             </div>
-          }
-          {
-            !this.state.docked &&
-            <h2 className="name-header">Harmony Dashut</h2>
           }
           <div className="App-content">
             { this.props.children }

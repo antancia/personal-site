@@ -9,21 +9,23 @@
 }
 
 .App-header {
-  height: 30px;
+  height: 50px;
   padding: 20px;
   float: top;
 }
 
 .hamburger-menu {
-  text-align: top;
-  width: 30px;
-  font-size: 25px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 40px;
   text-decoration: none;
   color: black;
   float: left;
+  margin: 0;
 }
 
 .name-header {
-  clear: both;
   font-family: 'Josefin Sans', sans-serif;
+  float: right;
+  margin: 0;
+  padding-top: 10px;
 }
