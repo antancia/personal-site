@@ -12,7 +12,7 @@ const SidebarContent = (props) => {
       <div>
         {
           props.sidebarDocked &&
-          <h2 className="SidebarContent-header">harmony dashut</h2>
+          <h2 className="SidebarContent-header">HARMONY DASHUT</h2>
         }
       </div>
       <div>

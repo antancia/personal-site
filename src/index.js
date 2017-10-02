@@ -6,7 +6,7 @@ import './styles/index.css';
 import App from './containers/App';
 import {
   Home,
-  Carousel,
+  Photos,
   About,
 } from './components';
 
@@ -15,7 +15,7 @@ ReactDOM.render((
   <App>
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route path="/photos" component={Carousel} />
+      <Route path="/photos" component={Photos} />
       <Route path="/about" component={About} />
     </Switch>
   </App>
