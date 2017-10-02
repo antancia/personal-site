@@ -2,21 +2,20 @@
   height: 100%;
   background-color: white;
   width: 256;
-  padding: 20px;
+  padding: 20px 40px 20px 40px;
 }
 
 .SidebarContent-header {
-  font-family: 'Josefin Sans', sans-serif;
 }
 
-.SidebarContent-link: {
-  display: block;
-  padding: 16px 0px;
-  color: #757575;
-  text-decoration: none;
+.SidebarContent-link {
+  font-family: 'Padauk', sans-serif;
+  font-size: 18px;
+  text-align: left;
+  padding-left: 7px;
 }
 
-.SidebarContent-divider: {
+.SidebarContent-divider {
   margin: 8px 0;
   height: 1;
   background-color: #757575;

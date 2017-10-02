@@ -78,7 +78,7 @@ class App extends React.Component {
               >=</a>
               {
                 !this.state.docked &&
-                <h2 className="name-header">Harmony Dashut</h2>
+                <h2 className="name-header">harmony dashut</h2>
               }
             </div>
           }

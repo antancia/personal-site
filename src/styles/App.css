@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
-
 .App {
-  text-align: center;
 }
 
 .App-content {
   padding: 20px;
+  text-align: center;
 }
 
 .App-header {
@@ -24,8 +22,6 @@
 }
 
 .name-header {
-  font-family: 'Josefin Sans', sans-serif;
   float: right;
   margin: 0;
-  padding-top: 10px;
 }
