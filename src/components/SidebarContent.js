@@ -10,14 +10,29 @@ const SidebarContent = (props) => {
   return (
     <div className="SidebarContent">
       <div>
-        <h2>Harmony Dashut</h2>
+        {
+          props.sidebarDocked &&
+          <h2 className="SidebarContent-header">harmony dashut</h2>
+        }
       </div>
       <div>
-        <Link to="/" onClick={closeSidebar}>Home</Link>
+        <Link
+          to="/"
+          onClick={closeSidebar}
+          className="SidebarContent-link"
+        >home</Link>
         <br />
-        <Link to="/photos" onClick={closeSidebar}>Photos</Link>
+        <Link
+          to="/photos"
+          onClick={closeSidebar}
+          className="SidebarContent-link"
+        >photos</Link>
         <br />
-        <Link to="/about" onClick={closeSidebar}>About Me</Link>
+        <Link
+          to="/about"
+          onClick={closeSidebar}
+          className="SidebarContent-link"
+        >about me</Link>
       </div>
     </div>
   );

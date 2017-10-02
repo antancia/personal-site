@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/App.css';
-import SidebarContent from './SidebarContent';
 import Sidebar from 'react-sidebar';
+import SidebarContent from '../components/SidebarContent';
+import '../styles/App.css';
 
 const mql = window.matchMedia(`(min-width: 800px)`);
 
@@ -13,6 +13,7 @@ class App extends React.Component {
       mql: mql,
       docked: false,
       open: false,
+      transitions: false,
     };
 
     this.mediaQueryChanged = this.mediaQueryChanged.bind(this);
@@ -22,7 +23,7 @@ class App extends React.Component {
 
   componentWillMount() {
     mql.addListener(this.mediaQueryChanged);
-    this.setState({mql: mql, docked: mql.matches});
+    this.setState({mql: mql, docked: mql.matches, transitions: !mql.matches});
   }
 
   componentWillUnmount() {
@@ -37,6 +38,7 @@ class App extends React.Component {
     this.setState({
       mql: mql,
       docked: this.state.mql.matches,
+      transitions: !this.state.mql.matches,
     });
   }
 
@@ -49,7 +51,12 @@ class App extends React.Component {
   }
 
   render() {
-    const sidebar = <SidebarContent onSetOpen={this.onSetOpen} />;
+    const sidebar = (
+      <SidebarContent
+        onSetOpen={this.onSetOpen}
+        sidebarDocked={this.state.docked}
+      />
+    );
 
     return (
       <div className="App">
@@ -59,13 +66,28 @@ class App extends React.Component {
           docked={this.state.docked}
           onSetOpen={this.onSetOpen}
           shadow={false}
+          transitions={this.state.transitions}
         >
-          {!this.state.docked &&
-           <a onClick={this.toggleOpen} href="#">=</a>}
-          { this.props.children }
+          {
+            !this.state.docked &&
+            <div className="App-header">
+              <a
+                onClick={this.toggleOpen}
+                href="#"
+                className="hamburger-menu"
+              >=</a>
+              {
+                !this.state.docked &&
+                <h2 className="name-header">harmony dashut</h2>
+              }
+            </div>
+          }
+          <div className="App-content">
+            { this.props.children }
+          </div>
         </Sidebar>
       </div>
-  );
+    );
   }
 }
 
