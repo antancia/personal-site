@@ -8,6 +8,7 @@ var settings = {
   centerMode: true,
   centerPadding: 0,
   accessibility: true,
+  infinite: false,
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -38,19 +39,27 @@ function PrevArrow(props) {
   );
 }
 
-const Carousel = () => {
-  return (
-    <div className="slick-container">
-      <Slider {...settings}>
-        <div><img alt="kitten" src='http://placekitten.com/g/600/400' /></div>
-        <div><img alt="kitten" src='http://placekitten.com/g/400/400' /></div>
-        <div><img alt="kitten" src='http://placekitten.com/g/600/400' /></div>
-        <div><img alt="kitten" src='http://placekitten.com/g/600/400' /></div>
-        <div><img alt="kitten" src='http://placekitten.com/g/400/400' /></div>
-        <div><img alt="kitten" src='http://placekitten.com/g/600/400' /></div>
-      </Slider>
-    </div>
-  );
+class Carousel extends React.Component {
+  componentWillMount() {
+    // crappy workaround so that the media query in react-slick will properly
+    // find the window size on first load
+    this.forceUpdate();
+  }
+
+  render(){
+    return (
+      <div className="slick-container">
+        <Slider {...settings}>
+          <div><img alt="kitten" src='http://placekitten.com/g/600/400' /></div>
+          <div><img alt="kitten" src='http://placekitten.com/g/400/400' /></div>
+          <div><img alt="kitten" src='http://placekitten.com/g/600/400' /></div>
+          <div><img alt="kitten" src='http://placekitten.com/g/600/400' /></div>
+          <div><img alt="kitten" src='http://placekitten.com/g/400/400' /></div>
+          <div><img alt="kitten" src='http://placekitten.com/g/600/400' /></div>
+        </Slider>
+      </div>
+    );
+  }
 }
 
 export default Carousel;
