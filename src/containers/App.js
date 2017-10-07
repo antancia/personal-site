@@ -73,7 +73,7 @@ class App extends React.Component {
             <div className="App-header">
               <a
                 onClick={this.toggleOpen}
-                href="#"
+                href="#open"
                 className="hamburger-menu"
               >=</a>
               {

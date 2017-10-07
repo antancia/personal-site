@@ -1,0 +1,16 @@
+.arrow {
+  display: block;
+  background: gray;
+  border-radius: 50%;
+}
+
+.slick-container {
+}
+
+.slick-track {
+}
+
+.slick-slide.slick-active img {
+  margin-left: auto;
+  margin-right: auto;
+}

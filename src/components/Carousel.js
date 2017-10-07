@@ -1,33 +1,38 @@
 import React from 'react';
 import Slider from 'react-slick';
+import '../styles/Carousel.css';
 
 var settings = {
   dots: true,
   infinite: true,
+  centerMode: true,
+  centerPadding: 0,
+  accessibility: true,
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  nextArrow: <SampleNextArrow />,
-  prevArrow: <SamplePrevArrow />,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
+  // responsive: [{breakpoint: 500, settings: {autoplay: false, slidesToShow: 1}}],
 };
 
-function SampleNextArrow(props) {
+function NextArrow(props) {
   const {className, style, onClick} = props
   return (
     <div
       className={className}
-      style={{...style, display: 'block', background: 'gray'}}
+      style={{display: 'block', background: 'gray', borderRadius: '50%'}}
       onClick={onClick}
     ></div>
   );
 }
 
-function SamplePrevArrow(props) {
+function PrevArrow(props) {
   const {className, style, onClick} = props
   return (
     <div
       className={className}
-      style={{...style, display: 'block', background: 'gray'}}
+      style={{display: 'block', background: 'gray', borderRadius: '50%'}}
       onClick={onClick}
     ></div>
   );
@@ -35,14 +40,16 @@ function SamplePrevArrow(props) {
 
 const Carousel = () => {
   return (
-    <Slider {...settings}>
-      <div><img src='http://placekitten.com/g/600/400' /></div>
-      <div><img src='http://placekitten.com/g/400/400' /></div>
-      <div><img src='http://placekitten.com/g/600/400' /></div>
-      <div><img src='http://placekitten.com/g/600/400' /></div>
-      <div><img src='http://placekitten.com/g/600/400' /></div>
-      <div><img src='http://placekitten.com/g/600/400' /></div>
-    </Slider>
+    <div className="slick-container">
+      <Slider {...settings}>
+        <div><img alt="kitten" src='http://placekitten.com/g/600/400' /></div>
+        <div><img alt="kitten" src='http://placekitten.com/g/400/400' /></div>
+        <div><img alt="kitten" src='http://placekitten.com/g/600/400' /></div>
+        <div><img alt="kitten" src='http://placekitten.com/g/600/400' /></div>
+        <div><img alt="kitten" src='http://placekitten.com/g/400/400' /></div>
+        <div><img alt="kitten" src='http://placekitten.com/g/600/400' /></div>
+      </Slider>
+    </div>
   );
 }
 

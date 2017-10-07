@@ -22,3 +22,8 @@ h2 {
   color: #494949;
   font-size: 25px;
 }
+
+* {
+  min-height: 0;
+  min-width: 0;
+}
